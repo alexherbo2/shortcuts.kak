@@ -1,0 +1,25 @@
+= Shortcuts
+
+Shortcuts to common commands.
+
+== Usage
+
+- Move by word with `w`, `e` and `b` – which are symmetrical.
+- Move lines with `Down` and `Up`.
+- Select highlights.
+
+== Configuration
+
+--------------------------------------------------------------------------------
+map -docstring 'select next word' global normal w ':select-next-word<ret>'
+map -docstring 'move line down' global normal <down> ':move-lines-down<ret>'
+map -docstring 'move line up' global normal <up> ':move-lines-up<ret>'
+map -docstring 'select all occurrences of current selection' global normal <a-percent> ':select-highlights<ret>'
+--------------------------------------------------------------------------------
+
+== Commands
+
+- `select-next-word`
+- `move-lines-down`
+- `move-lines-up`
+- `select-highlights`
