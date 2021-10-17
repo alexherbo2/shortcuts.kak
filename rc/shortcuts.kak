@@ -1,5 +1,13 @@
 # Shortcuts
-# Public commands: ["select-next-word", "move-lines-down", "move-lines-up", "select-highlights"]
+# Public commands: ["erase-character-before-cursor", "erase-character-under-cursor", "select-next-word", "move-lines-down", "move-lines-up", "select-highlights"]
+
+define-command -override erase-character-before-cursor -docstring 'erase character before cursor' %{
+  execute-keys -draft ';i<backspace>'
+}
+
+define-command -override erase-character-under-cursor -docstring 'erase character under cursor' %{
+  execute-keys -draft ';i<del>'
+}
 
 define-command -override select-next-word -docstring 'select next word' %{
   evaluate-commands -itersel %{
