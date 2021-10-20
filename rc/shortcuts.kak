@@ -12,6 +12,9 @@ map -docstring 'move line up' global normal <up> ': move-lines-up<ret>'
 
 map -docstring 'select all occurrences of current selection' global normal <a-percent> ': select-highlights<ret>'
 
+map -docstring 'increment selection' global normal <c-a> ': increment-selection %val{count}<ret>'
+map -docstring 'decrement selection' global normal <c-x> ': decrement-selection %val{count}<ret>'
+
 # Commands ─────────────────────────────────────────────────────────────────────
 
 define-command -override erase-character-before-cursor -docstring 'erase character before cursor' %{
@@ -52,4 +55,12 @@ define-command -override move-lines-up -docstring 'move line up' %{
 
 define-command -override select-highlights -docstring 'select all occurrences of current selection' %{
   execute-keys '"aZ*%s<ret>"bZ"az"b<a-z>a'
+}
+
+define-command -override increment-selection -params 1 -docstring 'increment-selection <count>: increment selection by count' %{
+  execute-keys "a+%sh{expr $1 '|' 1}<esc>|bc<ret>"
+}
+
+define-command -override decrement-selection -params 1 -docstring 'decrement-selection <count>: decrement selection by count' %{
+  execute-keys "a-%sh{expr $1 '|' 1}<esc>|bc<ret>"
 }
