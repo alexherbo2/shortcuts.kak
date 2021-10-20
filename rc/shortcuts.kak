@@ -1,5 +1,18 @@
 # Shortcuts
-# Public commands: ["erase-character-before-cursor", "erase-character-under-cursor", "select-next-word", "move-lines-down", "move-lines-up", "select-highlights"]
+
+# Mappings ─────────────────────────────────────────────────────────────────────
+
+map -docstring 'erase character before cursor' global normal <backspace> ': erase-character-before-cursor<ret>'
+map -docstring 'erase character under cursor' global normal <del> ': erase-character-under-cursor<ret>'
+
+map -docstring 'select next word' global normal w ': select-next-word<ret>'
+
+map -docstring 'move line down' global normal <down> ': move-lines-down<ret>'
+map -docstring 'move line up' global normal <up> ': move-lines-up<ret>'
+
+map -docstring 'select all occurrences of current selection' global normal <a-percent> ': select-highlights<ret>'
+
+# Commands ─────────────────────────────────────────────────────────────────────
 
 define-command -override erase-character-before-cursor -docstring 'erase character before cursor' %{
   execute-keys -draft ';i<backspace>'
