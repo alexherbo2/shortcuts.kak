@@ -66,3 +66,11 @@ define-command -override increment-selection -params 1 -docstring 'increment-sel
 define-command -override decrement-selection -params 1 -docstring 'decrement-selection <count>: decrement selection by count' %{
   execute-keys "a-%sh{expr $1 '|' 1}<esc>|bc<ret>"
 }
+
+define-command -override evaluate-selections -docstring 'evaluate selections' %{
+  evaluate-commands -itersel %{
+    evaluate-commands %val{selection}
+  }
+}
+
+alias global = evaluate-selections

@@ -10,6 +10,7 @@ Shortcuts to common operations.
 - Select highlights with `Alt+%`.
 - Increment and decrement selections with `Control+A` and `Control+X`.
 - Complete the buffer directory with `Alt+/`.
+- Evaluate selections with `=`.
 
 == Commands
 
@@ -30,4 +31,5 @@ Shortcuts to common operations.
 
 === Prompt
 
+- `=` ⇒ Evaluate selections.
 - `Alt+/` ⇒ Buffer directory.
