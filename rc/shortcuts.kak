@@ -15,6 +15,8 @@ map -docstring 'select all occurrences of current selection' global normal <a-pe
 map -docstring 'increment selection' global normal <c-a> ': increment-selection %val{count}<ret>'
 map -docstring 'decrement selection' global normal <c-x> ': decrement-selection %val{count}<ret>'
 
+map -docstring 'buffer directory' global prompt <a-/> '%sh{dirname "$kak_bufname"}<a-!>/'
+
 # Commands ─────────────────────────────────────────────────────────────────────
 
 define-command -override erase-character-before-cursor -docstring 'erase character before cursor' %{

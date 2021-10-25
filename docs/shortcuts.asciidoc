@@ -9,8 +9,11 @@ Shortcuts to common operations.
 - Move lines with `Down` and `Up`.
 - Select highlights with `Alt+%`.
 - Increment and decrement selections with `Control+A` and `Control+X`.
+- Complete the buffer directory with `Alt+/`.
 
 == Commands
+
+=== Normal
 
 - `Backspace` ⇒ Erase character before cursor.
 - `Delete` ⇒ Erase character under cursor.
@@ -24,3 +27,7 @@ Shortcuts to common operations.
 
 - `Control+A` ⇒ Increment selection.
 - `Control+X` ⇒ Decrement selection.
+
+=== Prompt
+
+- `Alt+/` ⇒ Buffer directory.
