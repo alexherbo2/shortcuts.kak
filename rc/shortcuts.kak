@@ -60,11 +60,11 @@ define-command -override select-highlights -docstring 'select all occurrences of
 }
 
 define-command -override increment-selection -params 1 -docstring 'increment-selection <count>: increment selection by count' %{
-  execute-keys "a+%sh{expr $1 '|' 1}<esc>|bc<ret>"
+  execute-keys "a+%sh{expr $1 '|' 1}<esc>|{ cat; echo; } | bc<ret>"
 }
 
 define-command -override decrement-selection -params 1 -docstring 'decrement-selection <count>: decrement selection by count' %{
-  execute-keys "a-%sh{expr $1 '|' 1}<esc>|bc<ret>"
+  execute-keys "a-%sh{expr $1 '|' 1}<esc>|{ cat; echo; } | bc<ret>"
 }
 
 define-command -override evaluate-selections -docstring 'evaluate selections' %{
