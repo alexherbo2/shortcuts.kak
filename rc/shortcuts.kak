@@ -7,8 +7,8 @@ map -docstring 'erase character under cursor' global normal <del> ': erase-chara
 
 map -docstring 'select next word' global normal w ': select-next-word<ret>'
 
-map -docstring 'move line down' global normal <down> ': move-lines-down<ret>'
-map -docstring 'move line up' global normal <up> ': move-lines-up<ret>'
+map -docstring 'move line down' global normal <a-down> ': move-lines-down<ret>'
+map -docstring 'move line up' global normal <a-up> ': move-lines-up<ret>'
 
 map -docstring 'select all occurrences of current selection' global normal <a-percent> ': select-highlights<ret>'
 
