@@ -48,11 +48,11 @@ define-command -override -hidden search-next-word -docstring 'search next word' 
 
 # Reference: https://code.visualstudio.com/docs/getstarted/keybindings#_basic-editing
 define-command -override move-lines-down -docstring 'move line down' %{
-  execute-keys -draft '<a-x><a-_><a-:>Z;ezj<a-x>dzP'
+  execute-keys -draft 'x<a-_><a-:>Z;ezjxdzP'
 }
 
 define-command -override move-lines-up -docstring 'move line up' %{
-  execute-keys -draft '<a-x><a-_><a-:><a-;>Z;bzk<a-x>dzp'
+  execute-keys -draft 'x<a-_><a-:><a-;>Z;bzkxdzp'
 }
 
 define-command -override select-highlights -docstring 'select all occurrences of current selection' %{
